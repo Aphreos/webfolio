@@ -1,0 +1,531 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Menu:
+- Font declarations
+- Base styles
+- Typography base styles
+- Main structure
+- Header elements
+- Content elements
+- Footer elements
+- Small screen sizes
+*/
+
+/* Font declarations
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* This is where you declare all of the fonts you want to use in your website */
+
+@font-face {
+    font-family: 'earthorbiter';
+    src: url('../fonts/earthorbiter/EarthOrbiterExpanded.woff2') format('woff2'),
+        url('../fonts/earthorbiter/EarthOrbiterExpanded.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'broadway';
+    src: url('../fonts/broadway/broad.woff2') format('woff2'),
+        url('../fonts/broadway/broad.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'EBGaramond-Regular';
+  src: url('../fonts/ebgaramond/EBGaramond-Regular.eot');
+  src: url('../fonts/ebgaramond/EBGaramond-Regular.eot') format('embedded-opentype'),
+       url('../fonts/ebgaramond/EBGaramond-Regular.woff2') format('woff2'),
+       url('../fonts/ebgaramond/EBGaramond-Regular.woff') format('woff'),
+       url('../fonts/ebgaramond/EBGaramond-Regular.ttf') format('truetype'),
+       url('../fonts/ebgaramond/EBGaramond-Regular.svg#EBGaramond-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout this template
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+	font-size: 62.5%;
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+	line-height: 1.6;
+	font-weight: 400;
+	font-family: "EBGaramond-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #222;
+	height: 100%;
+	margin: 0;
+}
+
+.contentWrapper {
+	min-height: 100%;
+	float: left;
+	width: 100%;
+}
+
+.contentInside {
+	padding-bottom: 90px;
+	float: left;
+	width: 100%;
+}
+
+.footer {
+  height: 90px;
+  margin-top: -90px;
+}
+
+img {
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* Typography base styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Ensures that fonts display correctly on all screen sizes + other font styles */
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2px;
+  font-weight: 300;
+  color: #0f4160;
+}
+
+h1 { font-size: 3.2rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 2.8rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 2.4rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.6rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.4rem; line-height: 1.6;  letter-spacing: 0; }
+
+p {
+	margin-top: 0;
+	color: #0f4160;
+	line-height: 1.52em;
+}
+
+h1, h2 {
+	font-family: 'broadway';
+}
+
+p {
+	font-family: "EBGaramond-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+h1 {
+	font-weight: bold;
+}
+
+h2 {
+	color: #000;
+	margin: 20px 0 6px 0;
+	text-align: center;
+}
+
+.recovery-title{
+	font-family: 'earthorbiter';
+	text-align: center;
+	font-size: 50px;
+	padding-top: 10px;
+}
+
+h3 {
+	font-family:v 'earthorbiter';
+	text-align:center;
+}
+
+.gladius-h1 {
+	font-weight: normal;
+	text-align: center;
+	font-size: 40px;
+}
+
+/* Main Structure
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* This site uses body, header, content and footer as top level blocks */
+
+body {
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #bad7d8;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+.header {
+  background-image:url("../images/glitchscreen.gif");
+  background-size: cover;
+      
+  height: 100vh;
+  padding:0;
+  margin:0;
+}
+
+.content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 0 auto;
+  padding: 0;
+}
+
+.contentInternal {
+	width: 96%;
+	float: left;
+	padding: 0 2%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.footer {
+	width: 100%;
+	float: left;
+	background-color: #000;
+}
+
+/* Header Elements
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* CSS for header, logo and navigation is here */
+
+.logo {
+	float: right;
+	width: 96%;
+	padding: 2%;
+	text-align: right;
+}
+
+.logo > p {
+	font-family: 'broadway';
+	font-size: 45px;
+	color: #FFFFFF;
+	margin-bottom: 0;
+	padding-top: 4px;
+	text-align: right;
+}
+
+.logo > p > a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+
+
+.mainNav {
+	float: left;
+	width: 55%;
+	padding: 2%;
+}
+
+.mainNav > ul {
+  float: left;
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.mainNav > ul > li {
+  /*float: left;*/
+  font-family: 'broadway';
+  font-size: 35px;
+  color: #FFFFFF;
+}
+
+.mainNav > ul > li a {
+  display: block;
+  color: #FFFFFF;
+  text-align: left;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.mainNav > ul > li a:hover {
+  color: #0069FF;
+}
+
+/* Info Pages Elements
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.header-info-pages {
+  background-image:url("../images/snowstatic.gif");
+  background-size: cover;
+      
+  height: 100vh;
+  padding:0;
+  margin:0;
+}
+
+.gmail-link {
+	width: 20%;
+	padding-left: 75px;
+}
+
+.insta-link {
+	width: 14%;
+	padding-left: 50px;
+	padding-bottom: 25px;
+}
+
+.messenger-link {
+	width: 14%;
+	padding-left: 50px;
+	padding-bottom: 25px;
+}
+
+.facebook-link {
+	width: 14%;
+	padding-left: 50px;
+	padding-bottom: 25px;
+}
+
+.gladius-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.gladius-pdf {
+	padding-bottom: 23px;
+}
+
+.gladius-h3 {
+	font-family: 'broadway';
+	padding-bottom: 10px;
+}
+
+.gladius-h2 {
+	color: #0f4160;
+	padding-bottom: 15px;
+}
+
+.recovery-p {
+	font-family: 'earthorbiter';
+	padding-top: 15px;
+	color: #0f4160;
+	font-size: 17px;
+}
+
+.recovery-h2{
+	font-family: 'earthorbiter';
+	color: #0f4160;
+}
+
+.pic-of-me {
+	width: 30%;
+	float:left;
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+
+.about-me-txt {
+	float: right;
+	text-align: justify;
+	width: 60%;
+}
+
+
+
+/* Dropdown nav
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-btn {
+	color: white;
+	padding: 16px;
+	font-family: 'broadway';
+  	font-size: 35px;
+  	color: #FFFFFF;
+	/*cursor: pointer;*/
+}
+
+.dropdown-content a {
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	font-family: 'broadway';
+  	font-size: 25px;
+  	color: #FFFFFF;
+}
+
+.dropdown-content a:hover {
+	color: #0069FF;
+}
+
+.dropdown:hover .dropdown-btn {
+	color: #0069FF;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown-content {
+	display: none;
+	/*position: absolute;*/
+	z-index: 1;
+}
+
+
+/* Content Elements
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* CSS for the body content is here */
+
+.sectionWrap {
+	width: 100%;
+	float: left;
+	margin: 20px 0;
+}
+
+.img1 {
+	width: 60%;
+	float: left;
+	max-height: 240px;
+	overflow-y: hidden;
+}
+
+.img2 {
+	width: 38%;
+	float: right;
+	max-height: 240px;
+	overflow-y: hidden;
+}
+
+.contentTextWrap {
+	width: 100%;
+	margin: 20px auto 20px;
+}
+
+.contentText {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.contentTextWrap h1 {
+	margin-bottom: 16px;
+}
+
+.contentTextWrap h1 {
+	margin-bottom: 16px;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.img-nav h1 {
+    color: white;
+	font-family: 'broadway';
+	font-weight: normal;
+    position: relative;
+	float: left;
+	font-size: 50px;
+    top: 100px;
+    left: 30px;
+}
+
+.img-nav a.img-nav-img {
+	position: relative;
+}
+
+.img-nav img {
+	
+}
+
+/* Footer Elements
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* CSS for the footer is here */
+
+
+.footer > .copyright > p {
+	text-align: center;
+	color: #fff;
+	font-family: "MontserratBold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	padding: 35px;
+}
+
+
+
+
+/* Small screen sizes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* CSS for small screens such as smartphones - width of 740px or less */
+
+@media only screen and (max-width: 740px) {
+  .logo {
+	/*width: 92%;*/
+  }
+  .logo > p {
+	/*text-align: center;*/
+  }
+	.mainNav {
+		width: 92%;
+	}
+	.mainNav > ul {
+		float: none;
+		margin: 0 auto;
+		width: fit-content;
+	}
+	.img1 {
+		width: 100%;
+	}
+	.img2 {
+		display: none;
+	}
+	.img-nav h1 {
+		font-size: 30px;
+    	top: 10px;
+    	left: 10px;
+	}
+	.footerNav {
+		width: 92%;
+	}
+	.footerNav > ul {
+		float: none;
+		margin: 0 auto;
+		width: fit-content;
+	}
+	.footer > .copyright {
+		width: 92%;
+	}
+	.footer > .copyright > p {
+		text-align: center;
+	}
+}
+
+
+
+
+
+
+
+
